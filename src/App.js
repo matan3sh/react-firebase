@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logout, setUser } from 'store/actions/authActions';
 
 import { Login, Register, Home } from 'pages';
+import { Header } from 'components/layout';
 import { Spinner } from 'components/shared';
 import { Container } from 'styles';
 
@@ -25,6 +26,7 @@ const App = () => {
   else
     return (
       <Router>
+        <Header onLogout={onLogout} user={isAuth} />
         <Container>
           <Switch>
             <Route exact path='/' component={Home} />

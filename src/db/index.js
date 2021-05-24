@@ -6,6 +6,7 @@ const db = firebase
   .initializeApp({
     apiKey: '',
     authDomain: '',
+    databaseURL: '',
     projectId: '',
     storageBucket: '',
     messagingSenderId: '',
